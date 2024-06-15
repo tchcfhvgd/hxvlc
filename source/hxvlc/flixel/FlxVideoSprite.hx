@@ -122,6 +122,13 @@ class FlxVideoSprite extends FlxSprite
 	/**
 	 * Pauses the video.
 	 */
+	public function setSpeed(rate:Single):Void
+	{
+		if (bitmap != null)
+			bitmap.set_rate(rate);
+
+	}
+	
 	public function pause():Void
 	{
 		if (bitmap != null)
