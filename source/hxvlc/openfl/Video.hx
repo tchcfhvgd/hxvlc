@@ -1239,7 +1239,7 @@ class Video extends Bitmap
 	}
 
 	@:noCompletion
-	private function get_rate():Single
+	public function get_rate():Single
 	{
 		if (mediaPlayer != null)
 			return LibVLC.media_player_get_rate(mediaPlayer);
@@ -1248,7 +1248,7 @@ class Video extends Bitmap
 	}
 
 	@:noCompletion
-	private function set_rate(value:Single):Single
+	public function set_rate(value:Single):Single
 	{
 		if (mediaPlayer != null && LibVLC.media_player_set_rate(mediaPlayer, value) == -1)
 			Log.warn('Failed to set play rate');
