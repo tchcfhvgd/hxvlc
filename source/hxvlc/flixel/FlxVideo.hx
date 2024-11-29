@@ -83,6 +83,8 @@ class FlxVideo extends Video
 				volume = Math.floor(FlxMath.bound(getCalculatedVolume(), 0, 1) * Define.getFloat('HXVLC_FLIXEL_VOLUME_MULTIPLIER', 100));
 			#end
 		});
+		
+		FlxG.addChildBelowMouse(this);
 	}
 
 	#if FLX_SOUND_SYSTEM
@@ -181,6 +183,8 @@ class FlxVideo extends Video
 		#end
 
 		super.dispose();
+
+		FlxG.removeChild(this);
 	}
 
 	@:noCompletion
